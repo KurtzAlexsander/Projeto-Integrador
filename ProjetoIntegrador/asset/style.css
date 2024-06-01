@@ -185,24 +185,10 @@ nav ul li:last-child {
 }
 
 .adicionar-produto-btn:hover {
-  background-color: #2980b9; 
+  background-color: #2980b9; /* Cor azul mais escura ao passar o mouse */
 }
 
-    label {
-        display: inline-block;
-        width: 100px; 
-        text-align: right;
-        margin-right: 10px;
-        margin-bottom: 5px; 
-    }
-    input[type="text"],
-    input[type="number"],
-    input[type="file"],
-    textarea {
-        width: 300px; 
-        padding: 5px;
-        margin-bottom: 10px;
-        display: block; 
-        box-sizing: border-box; 
-    }
- 
+
+
+
+

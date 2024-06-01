@@ -1,10 +1,18 @@
+<?php
+
+require ("./data/conexao.php");
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro de Produto - Farmácia Pop</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="asset/style.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <style>
     label {
         display: inline-block;
@@ -28,13 +36,14 @@
 <body>
     <header>
         <div class="container">
-            <img src="caminho/para/logo.png" alt="Logo da Farmácia Pop" class="logo">
+            <img src="./img/LogoFarmacia.png" alt="Logo da Farmácia Pop" class="logo">
             <h1>Farmácia Pop</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="produtos.html">Produtos</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="index.php">Início</a></li>
+              	    <li><a href="produtos.php">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li> 
+                    <li><a href="admin.php">Admin</a></li>
                 </ul>
             </nav>
         </div>
@@ -42,7 +51,7 @@
 
     <section class="conteudo">
         <h2>Cadastrar Novo Produto</h2>
-        <form action="processar_cadastro.php" method="POST" enctype="multipart/form-data">
+        <form action="./data/create.php" method="POST" enctype="multipart/form-data" >
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required><br>
 
@@ -52,10 +61,10 @@
             <label for="preco">Preço:</label>
             <input type="number" id="preco" name="preco" min="0.01" step="0.01" required><br>
 
-            <label for="imagem">Imagem:</label>
-            <input type="file" id="imagem" name="imagem" accept="image/*"><br>
+            <label for="imagem">URL da imagem:</label>
+            <input type="text" id="imagem" name="imagem"><br>
 
-            <input type="submit" value="Cadastrar">
+            <input class="adicionar-produto-btn" type="submit" value="Cadastrar">
         </form>
     </section>
 
